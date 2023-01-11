@@ -3,8 +3,8 @@
 
 <div class="container py-3">
   <div class="card shadow">
-    <div class="card-header">
-      <h1>Home Page</h1>
+    <div class="card-header bg-primary">
+      <h1 class="text-white">Home Page</h1>
     </div>
     <div class="card-body">
       <h5 class="card-title">ระบบสั่งจองอาหารออนไลน์</h5>
