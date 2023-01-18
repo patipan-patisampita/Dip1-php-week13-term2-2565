@@ -7,10 +7,10 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.php">หน้าแรก</a>
+            <a class="nav-link active" aria-current="page" href="index.php"><i class="bi bi-house-fill"></i> หน้าแรก</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="about.php">เกี่ยวกับ</a>
+            <a class="nav-link" href="about.php"><i class="bi bi-bank2"></i> เกี่ยวกับ</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -26,10 +26,10 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="register.php">ลงทะเบียน</a>
+            <a class="nav-link" href="register.php"><i class="bi bi-stack"></i> ลงทะเบียน</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="login.php">เข้าสู่ระบบ</a>
+            <a class="nav-link" href="login.php"><i class="bi bi-person-lock"></i> เข้าสู่ระบบ</a>
           </li>
         </ul>
       
