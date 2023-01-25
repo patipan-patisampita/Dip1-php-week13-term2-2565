@@ -10,7 +10,7 @@
 
         <div class="card-body">
 
-            <form action="code.php" method="post" enctype="multipart/form-data">
+            <form action="controllers/registercode.php" method="post" enctype="multipart/form-data">
                 <div class="row">
                     <div class="col-md-6">
                         <div class="mb-3">
@@ -63,7 +63,7 @@
                     </div>
 
                     <div class="mb-3">
-                        <input type="submit" value="ลงทะเบียน" class="btn btn-success form-control">
+                        <input type="submit" name="register_btn"  value="ลงทะเบียน" class="btn btn-success form-control">
                     </div>
 
                 </div>
