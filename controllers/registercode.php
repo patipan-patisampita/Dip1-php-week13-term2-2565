@@ -18,12 +18,35 @@
         $active = $_POST['active'] == true ? '1' : '0';
 
         if($password == $confirm_password ){
-            print("OK $active ");
+            //Check Email
+            $checkemail = "SELECT email FROM users WHERE email = '$email' ";
+            $checkemail_run = mysqli_query($con,$checkemail); 
+            if(mysqli_num_rows($checkemail_run)>0){
+                header("Location: ../register.php");
+                exit(0);
+            }
+            else{
+                $query ="INSERT INTO users (name, email, password, phone, photo, address, active, role_as)
+                VALUES ('$name', '$email', '$password ', '$phone', '', '$address', '$active', '$role_as')"; 
+                $query_run = mysqli_query($con,$query);
+
+                if($query_run){
+                    move_uploaded_file($_FILES['photo']['tmp_name'],'../uploads/users/'.$filename);
+                    header("Location: ../login.php");
+                    exit(0);
+                }
+                else{
+                    print("ลงทะเบียนไมผิดพลาด");
+                    header("Location: ../register.php");
+                    exit(0);
+                }
+            }
         }
 
         else{
             print("รหัสผ่ารไม่ตรงกัน");
-            header("Location: ../registercode.php");
+            header("Location: ../register.php");
+            exit(0);
         }
     }
 ?>
