@@ -2,6 +2,28 @@
 
 <?php 
     if(isset($_POST['register_btn'])){
-        print($name = $_POST['name']);
+        $name = mysqli_real_escape_string($con,$_POST['name']) ;
+        $email = mysqli_real_escape_string($con,$_POST['email']) ;
+        $password = mysqli_real_escape_string($con,$_POST['password']) ;
+        $confirm_password = mysqli_real_escape_string($con,$_POST['confirm_password']) ;
+
+        $phone = mysqli_real_escape_string($con,$_POST['phone']) ;
+       
+        $address = mysqli_real_escape_string($con,$_POST['address']) ;
+        $role_as = mysqli_real_escape_string($con,$_POST['role_as']) ;
+
+        $photo = $_FILES['photo']['name'] ;
+        $photo_extension = pathinfo($photo,PATHINFO_EXTENSION); //rename this photo
+        $filename = time().'.'.$photo_extension;
+        $active = $_POST['active'] == true ? '1' : '0';
+
+        if($password == $confirm_password ){
+            print("OK $active ");
+        }
+
+        else{
+            print("รหัสผ่ารไม่ตรงกัน");
+            header("Location: ../registercode.php");
+        }
     }
 ?>

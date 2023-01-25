@@ -62,6 +62,8 @@
                         </div>
                     </div>
 
+                    <input type="hidden" name="active" required class="form-control">
+
                     <div class="mb-3">
                         <input type="submit" name="register_btn"  value="ลงทะเบียน" class="btn btn-success form-control">
                     </div>
