@@ -27,7 +27,7 @@
             }
             else{
                 $query ="INSERT INTO users (name, email, password, phone, photo, address, active, role_as)
-                VALUES ('$name', '$email', '$password ', '$phone', '', '$address', '$active', '$role_as')"; 
+                VALUES ('$name', '$email', '$password ', '$phone', '$filename', '$address', '$active', '$role_as')"; 
                 $query_run = mysqli_query($con,$query);
 
                 if($query_run){
